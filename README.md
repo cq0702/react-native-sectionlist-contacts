@@ -49,19 +49,19 @@ class Example extends React.Component {
         }
     }
 
-  render() {
-        return(
-            <View style={styles.container}>
-                <SectionListContacts
-                    ref={s=>this.sectionList=s}
-                    sectionListData={this.state.dataArray}
-                    initialNumToRender={this.state.dataArray.length}
-                    showsVerticalScrollIndicator={false}
-                    SectionListClickCallback={(item,index)=>{
-                       console.log('---SectionListClickCallback--:',item,index)
-                    }}
-                />
-            </View>
-        )
-    }
+    render() {
+          return(
+              <View style={styles.container}>
+                  <SectionListContacts
+                      ref={s=>this.sectionList=s}
+                      sectionListData={this.state.dataArray}
+                      initialNumToRender={this.state.dataArray.length}
+                      showsVerticalScrollIndicator={false}
+                      SectionListClickCallback={(item,index)=>{
+                         console.log('---SectionListClickCallback--:',item,index)
+                      }}
+                  />
+              </View>
+          )
+      }
 }
