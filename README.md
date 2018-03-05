@@ -7,7 +7,7 @@ install the npm package:
 
 npm install react-native-gifted-chat --save
 
-    Example
+##Example
 
     import SectionListContacts from 'react-native-sectionlistContacts'
 
