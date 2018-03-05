@@ -2,6 +2,7 @@
 Address Book library for React Native
 
 Installation
+=========
 install the npm package:
 
 npm install react-native-gifted-chat --save
