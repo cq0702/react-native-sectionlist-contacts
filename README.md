@@ -5,10 +5,10 @@ Installation
 =========
 install the npm package:
 
-npm install react-native-gifted-chat --save
+    npm install react-native-gifted-chat --save
 
-##Example
-
+Basic usage
+=========
     import SectionListContacts from 'react-native-sectionlistContacts'
 
     class Example extends React.Component {
@@ -65,3 +65,5 @@ npm install react-native-gifted-chat --save
             )
         }
     }
+Props
+=========
