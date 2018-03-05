@@ -9,10 +9,10 @@ npm install react-native-gifted-chat --save
 
 Example
 
-import SectionListContacts from 'react-native-sectionlistContacts'
+  import SectionListContacts from 'react-native-sectionlistContacts'
 
-class Example extends React.Component {
-  constructor(props) {
+  class Example extends React.Component {
+   constructor(props) {
         super(props)
 
         let nameData=[
@@ -64,4 +64,4 @@ class Example extends React.Component {
               </View>
           )
       }
-}
+  }
