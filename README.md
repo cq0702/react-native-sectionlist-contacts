@@ -5,7 +5,7 @@ Installation
 =========
 install the npm package:
 
-    npm install react-native-gifted-chat --save
+    npm install react-native-sectionlistContacts --save
 
 Basic usage
 =========
@@ -67,3 +67,4 @@ Basic usage
     }
 Props
 =========
+·SectionListClickCallback
