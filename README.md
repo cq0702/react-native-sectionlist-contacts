@@ -67,4 +67,4 @@ Basic usage
     }
 Props
 =========
-·SectionListClickCallback
+· SectionListClickCallback
