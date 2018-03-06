@@ -86,11 +86,12 @@ Advanced Usage
 
 If you want to custom header,you can do like this:
 
-    <SectionListModule
-        ref={s=>this.sectionList=s}
-        ...
-        renderHeader={this._renderHeader}
-    />
+    render(){
+         <SectionListModule
+            ...
+            renderHeader={this._renderHeader}
+        />
+    }
     
     _renderHeader=(section)=>{
         return(
@@ -102,12 +103,13 @@ If you want to custom header,you can do like this:
     
 If you want to custom section item,you can do like this:
 
-    <SectionListModule
-        ref={s=>this.sectionList=s}
-        ...
-        renderItem={this._renderItem}
-    />
-    
+    render(){
+         <SectionListModule
+            ...
+           renderItem={this._renderItem}
+        />
+    }
+
     _renderItem(item){
         return(
             <View>
