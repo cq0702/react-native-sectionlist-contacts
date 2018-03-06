@@ -70,6 +70,7 @@ Props
 =========
 
 * ###sectionListData (Array) - data to display
+
 * sectionHeight (Integer) - height of the section item
 * initialNumToRender (Integer) - initial num of item to render
 * showAlphabet (Bool) - When false, Alphabet will not be displayed ; default is true 
