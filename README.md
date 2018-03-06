@@ -110,7 +110,9 @@ If you want to custom section item,you can do like this:
             </View>
         )
     }
+    
 Contribution
 =========
+
 Issues and contributions are very welcome: bug fixes, features, documentation.
 
