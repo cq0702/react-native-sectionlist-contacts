@@ -91,6 +91,7 @@ If you want to custom header,you can do like this:
         ...
         renderHeader={this._renderHeader}
     />
+    
     _renderHeader=(section)=>{
         return(
             <View>
@@ -106,6 +107,7 @@ If you want to custom section item,you can do like this:
         ...
         renderItem={this._renderItem}
     />
+    
     _renderItem(item){
         return(
             <View>
