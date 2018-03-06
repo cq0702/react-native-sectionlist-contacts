@@ -80,3 +80,35 @@ Props
 * letterTextStyle (Text.propTypes.style)- style of right alphabet text
 * renderHeader(Function:ReactComponent) -  Custom header component, accept 1 argument props and should return a component to use as the header.
 * renderItem (Function:ReactComponent) - Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
+Advanced Usage
+=========
+If you want to custom header,you can do like this:
+    <SectionListModule
+        ref={s=>this.sectionList=s}
+        ...
+        renderHeader={this._renderHeader}
+    />
+    _renderHeader=(section)=>{
+        return(
+            <View>
+                <Text>{section.key}</Text>
+            </View>
+        )
+    }
+If you want to custom section item,you can do like this:
+    <SectionListModule
+        ref={s=>this.sectionList=s}
+        ...
+        renderItem={this._renderItem}
+    />
+    _renderItem(item){
+        return(
+            <View>
+                <Text>{item}</Text>
+            </View>
+        )
+    }
+Contribution
+=========
+Issues and contributions are very welcome: bug fixes, features, documentation.
+
