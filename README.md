@@ -85,6 +85,7 @@ Advanced Usage
 =========
 
 If you want to custom header,you can do like this:
+
     <SectionListModule
         ref={s=>this.sectionList=s}
         ...
@@ -97,7 +98,9 @@ If you want to custom header,you can do like this:
             </View>
         )
     }
+    
 If you want to custom section item,you can do like this:
+
     <SectionListModule
         ref={s=>this.sectionList=s}
         ...
