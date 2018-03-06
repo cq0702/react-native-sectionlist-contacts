@@ -87,7 +87,7 @@ Advanced Usage
 If you want to custom header,you can do like this:
 
     render(){
-         <SectionListModule
+         <SectionListContacts
             ...
             renderHeader={this._renderHeader}
         />
@@ -104,7 +104,7 @@ If you want to custom header,you can do like this:
 If you want to custom section item,you can do like this:
 
     render(){
-         <SectionListModule
+         <SectionListContacts
             ...
            renderItem={this._renderItem}
         />
