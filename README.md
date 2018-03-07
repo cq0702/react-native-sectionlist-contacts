@@ -7,6 +7,8 @@ install the npm package:
 
     npm install react-native-sectionlist-contacts --save
 
+![][./exampleImage]
+
 Basic usage
 =========
     import SectionListContacts from 'react-native-sectionlist-contacts'
