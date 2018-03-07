@@ -72,17 +72,17 @@ Props
 =========
 
 * **sectionListData** (Array) required- data to display
-* **sectionHeight** (Integer) opational- height of the section item
-* **initialNumToRender** (Integer) opational- initial num of item to render
-* **showAlphabet** (Bool) - opationalWhen false, Alphabet will not be displayed , default is true
-* **SectionListClickCallback** (Function(item, index)) opational- Callback when each item is pressed
-* **sectionHeaderTextStyle** (Text.propTypes.style) opational- style of the section header text 
-* **sectionItemViewStyle** (View.propTypes.style) opational- style of the section item View 
-* **sectionItemTextStyle** (Text.propTypes.style) opational- style of the section item text
-* **letterViewStyle** (View.propTypes.style) opational- style of right alphabet view
-* **letterTextStyle** (Text.propTypes.style) opational- style of right alphabet text
-* **renderHeader**(Function:ReactComponent) opational-  Custom header component, accept 1 argument props and should return a component to use as the header.
-* **renderItem** (Function:ReactComponent) opational- Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
+* **sectionHeight** (Integer) optional- height of the section item
+* **initialNumToRender** (Integer) optional- initial num of item to render
+* **showAlphabet** (Bool)optional - When false, Alphabet will not be displayed , default is true
+* **SectionListClickCallback** (Function(item, index)) optional- Callback when each item is pressed
+* **sectionHeaderTextStyle** (Text.propTypes.style) optional- style of the section header text 
+* **sectionItemViewStyle** (View.propTypes.style) optional- style of the section item View 
+* **sectionItemTextStyle** (Text.propTypes.style) optional- style of the section item text
+* **letterViewStyle** (View.propTypes.style) optional- style of right alphabet view
+* **letterTextStyle** (Text.propTypes.style) optional- style of right alphabet text
+* **renderHeader**(Function:ReactComponent) optional-  Custom header component, accept 1 argument props and should return a component to use as the header.
+* **renderItem** (Function:ReactComponent) optional- Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
 
 Advanced Usage
 =========
