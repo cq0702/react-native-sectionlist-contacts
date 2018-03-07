@@ -1,0 +1,25 @@
+{
+  "name": "react-native-sectionlist-contacts",
+  "version": "1.0.0",
+  "description": "address book for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cq0702/react-native-sectionlistContacts.git"
+  },
+  "keywords": [
+    "react-native-sectionlistContacts",
+    "sectionlistContacts",
+    "react-native",
+    "addressbook"
+  ],
+  "author": "Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cq0702/react-native-sectionlistContacts/issues"
+  },
+  "homepage": "https://github.com/cq0702/react-native-sectionlistContacts#readme"
+}
