@@ -1,15 +1,15 @@
-# react-native-sectionlistContacts
+# react-native-sectionlist-contacts
 Address Book library for React Native
 
 Installation
 =========
 install the npm package:
 
-    npm install react-native-sectionlistContacts --save
+    npm install react-native-sectionlist-contacts --save
 
 Basic usage
 =========
-    import SectionListContacts from 'react-native-sectionlistContacts'
+    import SectionListContacts from 'react-native-sectionlist-contacts'
 
     export default class Example extends React.Component {
     
