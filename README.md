@@ -7,7 +7,7 @@ install the npm package:
 
     npm install react-native-sectionlist-contacts --save
 
-![][./exampleImage.png]
+![][exampleImage.png]
 
 Basic usage
 =========
