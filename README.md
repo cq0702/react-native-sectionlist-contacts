@@ -1,13 +1,13 @@
 # react-native-sectionlist-contacts
 Address Book library for React Native
 
+![](exampleImage.png)
+
 Installation
 =========
 install the npm package:
 
     npm install react-native-sectionlist-contacts --save
-
-![](exampleImage.png)
 
 Basic usage
 =========
