@@ -14,7 +14,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import SectionListModule from './sectionlistModule'
+import SectionListModule from 'react-native-sectionlist-contacts'
 
 type Props = {};
 export default class App extends Component<Props> {
