@@ -16,19 +16,21 @@ import {
 const {width,height} = Dimensions.get('window');
 import {makePy} from "./getFirstAlphabet";
 
-export default class SectionListContacts extends Component {
+export default class SectionListModule extends Component {
 
     static propTypes = {
+        sectionListData: PropTypes.array.isRequired,//传入的数据
         sectionHeight: PropTypes.number,
         letterViewStyle: View.propTypes.style,//右边字母组件样式
         sectionItemViewStyle: View.propTypes.style,//item组件样式
         sectionItemTextStyle: Text.propTypes.style,//item文字样式
         sectionHeaderTextStyle: Text.propTypes.style,//头部文字样式
-        showAlphabet:PropTypes.bool //是否显示右边字母
+        showAlphabet:PropTypes.bool, //是否显示右边字母
     };
 
     static defaultProps = {
         sectionHeight: 50,
+        sectionHeaderHeight: 40,
         showAlphabet: true
     };
 
@@ -64,18 +66,11 @@ export default class SectionListContacts extends Component {
             {data: [],key: '其他'},
         ]
         this.state = {
-            data: null,
             dataArray: data,
-            delData: [],
-            letterData: []
         }
     }
 
-    componentDidMount() {
-        this.loadData()
-    }
-
-    loadData(){
+    render() {
 
         let data=this.state.dataArray
         this.props.sectionListData.map((item,index)=>{
@@ -103,15 +98,6 @@ export default class SectionListContacts extends Component {
                 letterData.push(data[i].key)
             }
         }
-
-        this.setState({
-            delData: delData,
-            letterData: letterData
-        })
-    }
-
-    render() {
-
         return(
             <View style={styles.container}>
                 <SectionList
@@ -119,7 +105,7 @@ export default class SectionListContacts extends Component {
                     style={this.props.SectionListStyle}
                     ref={s=>this.sectionList=s}
                     keyExtractor={this._keyExtractor}
-                    sections={this.state.delData}
+                    sections={delData}
                     renderSectionHeader={this._renderSectionHeader}
                     renderItem={this._renderItem}
                     getItemLayout={(data, index) => ( {length: this.props.sectionHeight, offset: this.props.sectionHeight * index, index} )}
@@ -128,17 +114,17 @@ export default class SectionListContacts extends Component {
                     this.props.showAlphabet?(
                             <View style={[styles.letterView,this.props.letterViewStyle]}>
                                 {
-                                    this.state.letterData.map((item,index)=>{
+                                    letterData.map((item,index)=>{
                                         let otherStyle=[]
-                                        if (index==this.state.letterData.length-1){
+                                        if (index==letterData.length-1){
                                             if (item=='其他'){
                                                 otherStyle.push({width: 36,height: 30,paddingLeft: 20})
                                             }
                                         }
                                         return(
                                             <TouchableWithoutFeedback key={'letter_'+index} onPress={()=>{
-                                    this.sectionList.scrollToLocation({animated: false,itemIndex: 0,sectionIndex: index,viewOffset: 40})
-                                }}>
+                                                this.sectionList.scrollToLocation({animated: false,itemIndex: 0,sectionIndex: index,viewOffset: this.props.sectionHeight})
+                                            }}>
                                                 <View style={[styles.letterItemView,otherStyle]}>
                                                     <Text style={[styles.letterText,this.props.letterTextStyle]}>{item}</Text>
                                                 </View>
@@ -193,7 +179,7 @@ class SectionItem extends PureComponent {
     render() {
         return(
             <TouchableWithoutFeedback onPress={()=>{
-                 this.props.callback()
+                this.props.callback()
             }}>
                 <View style={[styles.itemStyle,this.props.sectionItemViewStyle]}>
                     <Text style={[styles.artistText,this.props.sectionItemTextStyle]}>{this.props.item}</Text>
