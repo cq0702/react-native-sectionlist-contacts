@@ -101,7 +101,7 @@ If you want to custom header,you can do like this:
         />
     }
     
-    _renderHeader=(section)=>{
+    _renderHeader=(params)=>{
         console.log('---custom-renderHeader--',params)
         return <View><Text>{params.key}</Text></View>
     }
