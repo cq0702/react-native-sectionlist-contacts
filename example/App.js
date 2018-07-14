@@ -22,34 +22,36 @@ export default class App extends Component<Props> {
     constructor(props) {
         super(props)
 
+        //name字段必须,其他可有可无
         let nameData=[
-            '阿玛尼',
-            'OK',
-            '天津饭',
-            '%……&',
-            '周星驰',
-            '习大表哥',
-            '不要这样',
-            'V字仇杀队',
-            '拼车',
-            '他妈跌',
-            '淫僧',
-            '钱学森',
-            '宁采臣',
-            '史泰龙',
-            '恐龙',
-            '任达华',
-            '妈咪宝贝',
-            'ing',
-            '康麦隆',
-            '刘德华',
-            '精忠报国',
-            '黄药师',
-            '大叔皮',
-            '布达拉宫',
-            '方世玉',
-            'ET外星人',
-            '程咬金',
+            {name:'阿玛尼',id:'amani',params: ''},
+            {name:'OK',id:'ok',params: '123'},
+            {name:'天津饭'},
+            {name:'%……&'},
+            {name:'周星驰'},
+            {name:'习大表哥'},
+            {name:'不要这样'},
+            {name:'V字仇杀队'},
+            {name:'拼车'},
+            {name:'他妈跌'},
+            {name:'淫僧'},
+            {name:'钱学森'},
+            {name:'宁采臣'},
+            {name:'史泰龙'},
+            {name:'恐龙'},
+            {name:'任达华'},
+            {name:'妈咪宝贝'},
+            {name:'ing'},
+            {name:'康麦隆'},
+            {name:'刘德华'},
+            {name:'精忠报国'},
+            {name:'黄药师'},
+            {name:'大叔皮'},
+            {name:'布达拉宫'},
+            {name:'方世玉'},
+            {name:'ET外星人'},
+            {name:'程咬金'},
+            {name:'**&&&&'},
         ]
 
         this.state = {
@@ -69,6 +71,7 @@ export default class App extends Component<Props> {
                     SectionListClickCallback={(item,index)=>{
                        console.log('---SectionListClickCallback--:',item,index)
                     }}
+                    otherAlphabet="#"
                 />
             </View>
         )

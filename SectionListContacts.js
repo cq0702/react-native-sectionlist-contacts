@@ -26,12 +26,14 @@ export default class SectionListModule extends Component {
         sectionItemTextStyle: Text.propTypes.style,//item文字样式
         sectionHeaderTextStyle: Text.propTypes.style,//头部文字样式
         showAlphabet:PropTypes.bool, //是否显示右边字母
+        otherAlphabet:PropTypes.string, //其他的字符串
     };
 
     static defaultProps = {
         sectionHeight: 50,
         sectionHeaderHeight: 40,
-        showAlphabet: true
+        showAlphabet: true,
+        otherAlphabet: '其他'
     };
 
     constructor(props) {
@@ -63,26 +65,21 @@ export default class SectionListModule extends Component {
             {data: [],key: 'X'},
             {data: [],key: 'Y'},
             {data: [],key: 'Z'},
-            {data: [],key: '其他'},
+            {data: [],key: this.props.otherAlphabet},
         ]
         this.state = {
             dataArray: data,
         }
     }
 
-    render() {
-
+    filterData(){
         let data=this.state.dataArray
         this.props.sectionListData.map((item,index)=>{
             for (let i=0;i<data.length;i++){
                 if (i==data.length-1){
-                    if (data[i].key==makePy(item.toUpperCase())){
-                        data[i].data.push(item)
-                        break
-                    }else {
-                    }
-                }
-                if (data[i].key==makePy(item.toUpperCase())){
+                    data[i].data.push(item)
+                    break
+                }else if (data[i].key==makePy(item.name.toUpperCase())){
                     data[i].data.push(item)
                     break
                 }else {
@@ -98,6 +95,18 @@ export default class SectionListModule extends Component {
                 letterData.push(data[i].key)
             }
         }
+        return{
+            delData: delData,
+            letterData: letterData
+        }
+    }
+
+    render() {
+
+        let filterData=this.filterData()
+        let delData = filterData.delData
+        let letterData = filterData.letterData
+
         return(
             <View style={styles.container}>
                 <SectionList
@@ -117,8 +126,8 @@ export default class SectionListModule extends Component {
                                     letterData.map((item,index)=>{
                                         let otherStyle=[]
                                         if (index==letterData.length-1){
-                                            if (item=='其他'){
-                                                otherStyle.push({width: 36,height: 30,paddingLeft: 20})
+                                            if (item==this.props.otherAlphabet){
+                                                otherStyle.push({width: 20})
                                             }
                                         }
                                         return(
@@ -126,7 +135,7 @@ export default class SectionListModule extends Component {
                                                 this.sectionList.scrollToLocation({animated: false,itemIndex: 0,sectionIndex: index,viewOffset: this.props.sectionHeight})
                                             }}>
                                                 <View style={[styles.letterItemView,otherStyle]}>
-                                                    <Text style={[styles.letterText,this.props.letterTextStyle]}>{item}</Text>
+                                                    <Text numberOfLines={0} style={[styles.letterText,this.props.letterTextStyle]}>{item}</Text>
                                                 </View>
                                             </TouchableWithoutFeedback>
                                         )
@@ -158,6 +167,7 @@ export default class SectionListModule extends Component {
     _keyExtractor = (item, index) => index;
 
     _renderItem=({item,index})=>{
+
         if (this.props.renderItem){
             return(
                 this.props.renderItem(item)
@@ -182,7 +192,7 @@ class SectionItem extends PureComponent {
                 this.props.callback()
             }}>
                 <View style={[styles.itemStyle,this.props.sectionItemViewStyle]}>
-                    <Text style={[styles.artistText,this.props.sectionItemTextStyle]}>{this.props.item}</Text>
+                    <Text style={[styles.artistText,this.props.sectionItemTextStyle]}>{this.props.item.name}</Text>
                 </View>
             </TouchableWithoutFeedback>
 
@@ -206,7 +216,7 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent:'center',
-        right: 0
+        right: 0,
     },
     sectionHeaderView: {
         backgroundColor: '#ffffff',
@@ -226,11 +236,10 @@ const styles = StyleSheet.create({
         bottom: 0
     },
     letterItemView: {
-        width: 40,
-        height: 18,
         alignItems:'center',
         justifyContent: 'center',
-        paddingLeft: 20,
+        paddingVertical:1,
+        paddingHorizontal: 2,
     },
     artistText: {
         fontSize: 15,
