@@ -58,7 +58,7 @@ Basic usage
       render() {
             return(
                 <View style={styles.container}>
-                    <SectionListModule
+                    <SectionListContacts
                         ref={s=>this.sectionList=s}
                         sectionListData={this.state.dataArray}
                         sectionHeight={50}
