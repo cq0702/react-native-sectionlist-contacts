@@ -89,6 +89,7 @@ Props
 * **renderHeader**(Function:ReactComponent) optional-  Custom header component, accept 1 argument props and should return a component to use as the header.
 * **renderItem** (Function:ReactComponent) optional- Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
 * **otherAlphabet** (String) optional- the other alphabet
+
 Advanced Usage
 =========
 
