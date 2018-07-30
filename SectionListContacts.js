@@ -7,6 +7,7 @@ import {
     StyleSheet,
     View,
     Text,
+    ViewPropTypes,
     Animated,
     Dimensions,
     TouchableWithoutFeedback,
@@ -21,8 +22,8 @@ export default class SectionListModule extends Component {
     static propTypes = {
         sectionListData: PropTypes.array.isRequired,//传入的数据
         sectionHeight: PropTypes.number,
-        letterViewStyle: View.propTypes.style,//右边字母组件样式
-        sectionItemViewStyle: View.propTypes.style,//item组件样式
+        letterViewStyle: ViewPropTypes.style,//右边字母组件样式
+        sectionItemViewStyle: ViewPropTypes.style,//item组件样式
         sectionItemTextStyle: Text.propTypes.style,//item文字样式
         sectionHeaderTextStyle: Text.propTypes.style,//头部文字样式
         showAlphabet:PropTypes.bool, //是否显示右边字母
