@@ -77,7 +77,8 @@ Props
 =========
 
 * **sectionListData** (Array) required- data to display
-* **sectionHeight** (Integer) optional- height of the section item
+* **sectionHeight** (Integer) optional- height of the section item (Default: 50)
+* **sectionHeaderHeight** (Integer) optional- height of the section header (Default: 25)
 * **initialNumToRender** (Integer) optional- initial num of item to render
 * **showAlphabet** (Bool)optional - When false, Alphabet will not be displayed , default is true
 * **SectionListClickCallback** (Function(item, index)) optional- Callback when each item is pressed
@@ -86,6 +87,7 @@ Props
 * **sectionItemTextStyle** (Text.propTypes.style) optional- style of the section item text
 * **letterViewStyle** (View.propTypes.style) optional- style of right alphabet view
 * **letterTextStyle** (Text.propTypes.style) optional- style of right alphabet text
+* **scrollAnimation** (Bool)optional - (Default: false)
 * **renderHeader**(Function:ReactComponent) optional-  Custom header component, accept 1 argument props and should return a component to use as the header.
 * **renderItem** (Function:ReactComponent) optional- Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
 * **otherAlphabet** (String) optional- the other alphabet
