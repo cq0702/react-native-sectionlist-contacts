@@ -22,17 +22,20 @@ export default class SectionListModule extends Component {
     static propTypes = {
         sectionListData: PropTypes.array.isRequired,//传入的数据
         sectionHeight: PropTypes.number,
+        sectionHeaderHeight: PropTypes.number,
         letterViewStyle: ViewPropTypes.style,//右边字母组件样式
         sectionItemViewStyle: ViewPropTypes.style,//item组件样式
         sectionItemTextStyle: Text.propTypes.style,//item文字样式
         sectionHeaderTextStyle: Text.propTypes.style,//头部文字样式
+        scrollAnimation:PropTypes.bool,
         showAlphabet:PropTypes.bool, //是否显示右边字母
         otherAlphabet:PropTypes.string, //其他的字符串
     };
 
     static defaultProps = {
         sectionHeight: 50,
-        sectionHeaderHeight: 40,
+        sectionHeaderHeight: 25,
+        scrollAnimation: false,
         showAlphabet: true,
         otherAlphabet: '其他'
     };
@@ -133,7 +136,7 @@ export default class SectionListModule extends Component {
                                         }
                                         return(
                                             <TouchableWithoutFeedback key={'letter_'+index} onPress={()=>{
-                                                this.sectionList.scrollToLocation({animated: false,itemIndex: 0,sectionIndex: index,viewOffset: this.props.sectionHeight})
+                                                this.sectionList.scrollToLocation({animated: this.props.scrollAnimation, itemIndex: 0,sectionIndex: index,viewOffset: (this.props.sectionHeight * (index + 1)) + (this.props.sectionHeaderHeight * index)})
                                             }}>
                                                 <View style={[styles.letterItemView,otherStyle]}>
                                                     <Text numberOfLines={0} style={[styles.letterText,this.props.letterTextStyle]}>{item}</Text>
@@ -158,7 +161,7 @@ export default class SectionListModule extends Component {
             )
         }
         return(
-            <View style={styles.sectionHeaderView}>
+            <View style={[styles.sectionHeaderView, {height: this.props.sectionHeaderHeight}]}>
                 <Text style={[styles.sectionHeaderText,this.props.sectionHeaderTextStyle]}>{section.key}</Text>
                 <View style={styles.lineView}></View>
             </View>
@@ -221,13 +224,14 @@ const styles = StyleSheet.create({
     },
     sectionHeaderView: {
         backgroundColor: '#ffffff',
-        height: 40,
+        height: 25,
         justifyContent: 'center'
     },
     sectionHeaderText: {
         color: '#333333',
         fontSize: 14,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingLeft: 10
     },
     lineView: {
         width: '100%',
