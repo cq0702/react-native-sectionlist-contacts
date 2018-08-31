@@ -21,13 +21,13 @@ export default class SectionListModule extends Component {
 
     static propTypes = {
         sectionListData: PropTypes.array.isRequired,//传入的数据
-        sectionHeight: PropTypes.number,
-        sectionHeaderHeight: PropTypes.number,
+        sectionHeight: PropTypes.number,//内容的高度
+        sectionHeaderHeight: PropTypes.number,//头部索引的高度
         letterViewStyle: ViewPropTypes.style,//右边字母组件样式
         sectionItemViewStyle: ViewPropTypes.style,//item组件样式
         sectionItemTextStyle: Text.propTypes.style,//item文字样式
         sectionHeaderTextStyle: Text.propTypes.style,//头部文字样式
-        scrollAnimation:PropTypes.bool,
+        scrollAnimation:PropTypes.bool,//是否启动动画
         showAlphabet:PropTypes.bool, //是否显示右边字母
         otherAlphabet:PropTypes.string, //其他的字符串
     };
