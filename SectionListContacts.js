@@ -11,11 +11,12 @@ import {
     Animated,
     Dimensions,
     TouchableWithoutFeedback,
-    SectionList
+    SectionList,
 } from 'react-native';
 
 const {width,height} = Dimensions.get('window');
 import {makePy} from "./getFirstAlphabet";
+var _ = require('lodash');
 
 export default class SectionListModule extends Component {
 
@@ -77,7 +78,7 @@ export default class SectionListModule extends Component {
     }
 
     filterData(){
-        let data=this.state.dataArray
+        var data = _.cloneDeep(this.state.dataArray);
         this.props.sectionListData.map((item,index)=>{
             for (let i=0;i<data.length;i++){
                 if (i==data.length-1){
@@ -106,7 +107,6 @@ export default class SectionListModule extends Component {
     }
 
     render() {
-
         let filterData=this.filterData()
         let delData = filterData.delData
         let letterData = filterData.letterData

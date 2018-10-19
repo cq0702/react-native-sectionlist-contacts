@@ -1,6 +1,6 @@
 {
   "name": "react-native-sectionlist-contacts",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "address book for react native",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cq0702/react-native-sectionlist-contacts/issues"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   },
   "homepage": "https://github.com/cq0702/react-native-sectionlist-contacts#readme"
 }
