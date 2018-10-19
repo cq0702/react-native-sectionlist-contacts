@@ -61,7 +61,6 @@ Basic usage
                     <SectionListContacts
                         ref={s=>this.sectionList=s}
                         sectionListData={this.state.dataArray}
-                        sectionHeight={50}
                         initialNumToRender={this.state.dataArray.length}
                         showsVerticalScrollIndicator={false}
                         SectionListClickCallback={(item,index)=>{
@@ -118,7 +117,7 @@ If you want to custom section item,you can do like this:
         />
     }
 
-    renderItem=(params)=>{
+    _renderItem=(params)=>{
         console.log('---custom-renderItem--',params)
         return <View><Text>{params.name}</Text></View>
     }
