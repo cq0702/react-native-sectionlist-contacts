@@ -170,18 +170,18 @@ export default class SectionListModule extends Component {
 
     _keyExtractor = (item, index) => index;
 
-    _renderItem=({item,index})=>{
+    _renderItem=({item,index,section})=>{
 
         if (this.props.renderItem){
             return(
-                this.props.renderItem(item)
+                this.props.renderItem(item,index,section)
             )
         }
         return(
             <SectionItem
                 {...this.props}
                 callback={()=>{
-                    this.props.SectionListClickCallback(item,index)
+                    this.props.SectionListClickCallback(item,index,section)
                 }}
                 item={item} ></SectionItem>
         )

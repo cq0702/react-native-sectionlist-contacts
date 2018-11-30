@@ -118,9 +118,9 @@ If you want to custom section item,you can do like this:
         />
     }
 
-    renderItem=(params)=>{
-        console.log('---custom-renderItem--',params)
-        return <View><Text>{params.name}</Text></View>
+    renderItem=(item,index,section)=>{
+        console.log('---custom-renderItem--',item,index,section)
+        return <View><Text>{item.name}</Text></View>
     }
     
 Contribution

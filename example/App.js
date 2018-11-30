@@ -68,7 +68,7 @@ export default class App extends Component<Props> {
                     sectionHeight={50}
                     initialNumToRender={this.state.dataArray.length}
                     showsVerticalScrollIndicator={false}
-                    SectionListClickCallback={(item,index)=>{
+                    SectionListClickCallback={(item,index,section)=>{
                        console.log('---SectionListClickCallback--:',item,index)
                     }}
                     otherAlphabet="#"
