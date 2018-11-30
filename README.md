@@ -61,7 +61,6 @@ Basic usage
                     <SectionListContacts
                         ref={s=>this.sectionList=s}
                         sectionListData={this.state.dataArray}
-                        sectionHeight={50}
                         initialNumToRender={this.state.dataArray.length}
                         showsVerticalScrollIndicator={false}
                         SectionListClickCallback={(item,index)=>{
