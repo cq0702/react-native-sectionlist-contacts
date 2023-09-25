@@ -63,6 +63,7 @@ Basic usage
             <SectionListModule
                 sectionListData={nameData}
                 sectionHeight={50}
+                sectionHeaderHeight={25}
                 initialNumToRender={nameData.length}
                 showsVerticalScrollIndicator={false}
                 highlightAlphabetColor={'blue'}
@@ -99,6 +100,7 @@ Props
 * **scrollAnimation** (Bool)optional - (Default: false)
 * **highlightAlphabetColor** (String)optional - (Default: 'blue')
 * **showHighlightAlphabetColor** (Bool)optional - (Default: true)
+* **viewPosition** (Integer)optional (0, 0.5, 1) - (Default: 0)
 * **renderHeader**(Function:ReactComponent) optional-  Custom header component, accept 1 argument props and should return a component to use as the header.
 * **renderItem** (Function:ReactComponent) optional- Custom section item component,accept 2 argument props and should return a component to use as the ssction item.
 * **otherAlphabet** (String) optional- the other alphabet
