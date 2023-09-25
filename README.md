@@ -8,7 +8,9 @@ Installation
 =========
 install the npm package:
 
-    npm install react-native-sectionlist-contacts --save or yarn add react-native-sectionlist-contacts
+    npm install react-native-sectionlist-contacts --save 
+    or 
+    yarn add react-native-sectionlist-contacts
 
 Basic usage
 =========
