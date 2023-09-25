@@ -21,51 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="362a0db6-bd0a-4954-a98a-a4de6e6f2822" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SectionListContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/SectionListContacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/__tests__/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/sectionlistdemo/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/sectionlistdemo/MainApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/keystores/BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/keystores/debug.keystore.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo-tvOS/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo-tvOSTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/project.xcworkspace/xcuserdata/Roy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/xcshareddata/xcschemes/SectionListDemo-tvOS.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/xcshareddata/xcschemes/SectionListDemo.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo.xcodeproj/xcuserdata/Roy.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/AppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/Base.lproj/LaunchScreen.xib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemo/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemoTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/SectionListDemoTests/SectionListDemoTests.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +93,7 @@
       <workItem from="1540796512187" duration="188000" />
       <workItem from="1543470404104" duration="496000" />
       <workItem from="1543539235085" duration="1201000" />
-      <workItem from="1695613235097" duration="10897000" />
+      <workItem from="1695613235097" duration="11908000" />
     </task>
     <servers />
   </component>
