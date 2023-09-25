@@ -1,7 +1,8 @@
 # react-native-sectionlist-contacts
 Address Book library for React Native
 
-![](exampleImage.png)
+
+![Simulator Screenshot - iPhone 14 - 2023-09-25 at 20 32 40](https://github.com/cq0702/react-native-sectionlist-contacts/assets/18210575/24d84795-73ca-43e2-8a67-b52bbc8cd01b)
 
 Installation
 =========
