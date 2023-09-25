@@ -38,7 +38,8 @@ export default class SectionListModule extends Component {
         activeOpacity: 0.5,
         highlightAlphabet: '',
         highlightAlphabetColor: 'blue',
-        showHighlightAlphabetColor: true
+        showHighlightAlphabetColor: true,
+        viewPosition: 0
     };
 
     constructor(props) {
@@ -134,26 +135,19 @@ export default class SectionListModule extends Component {
                         <View style={[styles.letterView,this.props.letterViewStyle]}>
                             {
                                 letterData.map((item,index) => {
-                                    let otherStyle = [];
-                                    if (index == letterData.length-1){
-                                        if (item == this.props.otherAlphabet){
-                                            otherStyle.push({width: 20});
-                                        }
-                                    }
                                     let alphabetColor = [];
                                     if (this.state.highlightAlphabet === item && this.props.showHighlightAlphabetColor) {
-                                        otherStyle.push({color: this.props.highlightAlphabetColor || 'blue'});
+                                        alphabetColor.push({color: this.props.highlightAlphabetColor || 'blue'});
                                     }
-
                                     return(
                                         <TouchableOpacity activeOpacity = {this.props.activeOpacity} key = {'letter_'+index} onPress = {() => {
-                                            this.sectionList.scrollToLocation({animated: this.props.scrollAnimation, itemIndex: 0,sectionIndex: index,viewOffset: (this.props.sectionHeight * (index + 1)) + (this.props.sectionHeaderHeight * index)});
+                                            this.sectionList.scrollToLocation({animated: this.props.scrollAnimation, itemIndex: 0,sectionIndex: index,viewOffset: (this.props.sectionHeight * (index + 1)) + (this.props.sectionHeaderHeight * (index-2)),viewPosition:this.props.viewPosition || 0});
                                             this.setState({
                                                 highlightAlphabet: item
                                             })
                                         }}>
-                                            <View style = {[styles.letterItemView,otherStyle]}>
-                                                <Text numberOfLines = {0} style = {[styles.letterText,this.props.letterTextStyle,otherStyle]}>{item}</Text>
+                                            <View style = {styles.letterItemView}>
+                                                <Text numberOfLines = {0} style = {[styles.letterText,this.props.letterTextStyle,alphabetColor]}>{item}</Text>
                                             </View>
                                         </TouchableOpacity>
                                     )
